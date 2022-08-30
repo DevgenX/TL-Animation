@@ -1,0 +1,113 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+
+*
+{
+    margin : 0;
+    padding : 0;
+    box-sizing : border-box;
+    font-family : 'Poppins', sans-serif;
+}
+
+*, ::after, ::before {
+    box-sizing: border-box;
+}
+
+body {
+    display : flex;
+    justify-content : center;
+    align-items: center;
+    min-height : 100vh;
+    background : rgb(0, 0, 0);
+    
+}
+
+h1 {
+    position : relative;
+    font-size : 6em;
+    color : #222;
+    display: block;
+    margin-block-start: 0.67em;
+    margin-block-end: 0.67em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+}
+
+h1::before {
+    content : attr(data-text);
+    position : absolute;
+    color : #e1f1ff;
+    width : 100px;
+    overflow : hidden;
+    white-space : nowrap;
+    border-right : 4px solid #fff;
+    animation : animate 8s linear infinite;
+    filter : drop-shadow(0 0 20px #fff) drop-shadow(0 0 50px rgb(220, 215, 217));
+}
+
+@keyframes animate {
+    0%, 10%, 100% {
+        width : 0;
+    }
+    70%, 90% {
+        width : 100%
+    }
+}
+.navbar-brand img {
+    height : 20px;
+    width : 100%;
+}
+
+
+.logo-container {
+    width : 100%;
+}
+
+@media (min-width: 600px) {
+
+.h1, h1 {
+    font-size: 4em;
+}
+
+.navbar-brand img {
+    height : 100px;
+    width : 100%;
+}
+
+}
+
+@media (min-width: 350px) {
+
+ h1 {
+        font-size: 30px;
+    }
+ .navbar-brand img {
+    height : 50px;
+    width : 100%;
+ }
+    
+    }
+
+@media (min-width: 968px) {
+
+ h1 {
+   font-size: 70px;
+    }
+.navbar-brand img {
+   height : 100px;
+   width : 100%;
+     }
+                  
+}
+
+@media (min-width: 260px) {
+
+    h1 {
+      font-size: 50px;
+       }
+   .navbar-brand img {
+      height : 50px;
+      width : 100%;
+        }
+                     
+   }
+    
